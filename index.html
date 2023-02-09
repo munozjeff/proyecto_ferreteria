@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/product_section.js" defer></script>
+    <script src="js/map.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd7WqgjUB-hT2epkAafMw1byjxA_fOBmM&callback=initMap"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1 id="title_header">FERROELECTRICOS Y SOLUCIONES MUÑOZ</h1>
+            <nav id="nav_var_header">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Politicas de la tienda</a></li>
+                    <li id="more">
+                        <a>Más</a>
+                        <ul id="desplegable_menu">
+                            <li><a href="products/products.html">Productos</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Tips y consejos</a></li>
+                            <li><a href="#">Contáctenos</a></li>
+                            <li><a href="#">Tienda</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article id="presentation">
+            <p>TENEMOS TODO LO QUE NECESITAS PARA LA CONSTRUCCIÓN</p>
+            <p>productos de calidad a precios accesibles</p>
+        </article>
+        <article id="info">
+            <figure>
+                <img src="img/tienda.jpg"alt="imagen ferreteria-herramientas">
+            </figure>
+            <section>
+                <h2>SU FERRETERIA DE PRIMERA</h2>
+                <p>Ferroelectricos y soluciones muñoz es el lugar ideal en Pavas para encontrar materiales y suministros para construcción. Desde hace años, nuestra Ferretería ha proporcionado productos y servicios de calidad a constructores, contratistas y público en general. Nuestro equipo de especialistas está capacitado para aconsejar y dar recomendaciones e ideas creativas a los clientes. También podemos brindar asistencia práctica en caso de que se nos solicite.</p>
+                <p>En Ferroelectricos y soluciones muñoz estamos comprometidos a ayudar a todas las personas interesadas en construir, reparar o remodelar a pequeña y gran escala. No importa de qué tamaño sea su proyecto, estamos para servirle. Contamos con marcas como Puertas, Pisos y Ventanas, a precios accesibles. Queremos ayudarle a completar su proyecto. Contáctenos para saber cómo.</p>
+                <a href="#">
+                    <input type="button" value="Contáctenos">
+                </a>
+            </section>
+        </article>
+        <article id="product_section">
+            <section id="container_global">
+                <figure>
+                    <img id="previous" src="../img/back.png" alt="">
+                </figure>
+                <div id="container" class="container">
+        
+                </div>
+                <figure>
+                    <img id="next" src="../img/next.png" alt="">
+                </figure>
+            </section>
+        </article>
+        <article id="form_section">
+            <h3>CONTÁCTENOS</h3>
+            <form id="form" action="#">
+                <div>
+                    <label for="name">Nombre*</label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="affair">Asunto</label>
+                    <input type="text" id="affair" placeholder="Escribe el asunto">
+                </div>
+                <div>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" row="5" placeholder="Escribe el mensaje aqui"></textarea>
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </article>
+        <article id="map_section">
+            <div id="map">
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>Ferroelectricos y soluciones muñoz</p>
+        <p>ferroelectricosmunoz@gmail.com</p>
+        <p>3117206568 - 3137205878</p>
+        <p>©2023 por Ferroelectricos y soluciones muñoz</p>
+    </footer>
+</body>
+</html>

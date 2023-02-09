@@ -1,0 +1,122 @@
+/* .card{
+    box-sizing: border-box;
+    width: 216px;
+    height: 266px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.card figure{
+    width: 100%;
+    height: 206px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card input{
+    bottom: 55px;
+    border: none;
+    width: 216px;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    background-color: rgba(240, 248, 255, 0.46);
+    cursor: pointer;
+}
+.card span{
+    width: 100%;
+    height: 25px;
+} */
+
+html{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#container{
+    margin: 0;
+    width: 1080px;
+    background-color: brown;
+    /* overflow: visible; */
+    /* display: flex; */
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: hidden;
+    transition: all 2s ease;
+}
+.card{
+    box-sizing: border-box;
+    width: 216px;
+    height: 266px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    background-color: aliceblue;
+    display: inline-block;
+    margin: 0;
+    background-color: blue;
+}
+.card:hover .input{
+    height: 50px;
+    color: black;
+}
+.card_figure{
+    width: 100%;
+    height: 206px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.input{
+    bottom: 55px;
+    border: none;
+    width: 206px;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    background-color: rgba(240, 248, 255, 0.46);
+    color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.span{
+    width: 100%;
+    height: 25px;
+    display: block;
+}
+#container_global{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+#container_global>figure{
+    width: 32px;
+    border: none;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#container_global>figure>img{
+    cursor: pointer;
+}
+/* seccion de preoductos */
