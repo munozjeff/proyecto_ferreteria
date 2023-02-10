@@ -78,48 +78,7 @@ header a{
 }
 /*header*/
 /*main*/
-h2{
-    font-size: 4rem;
-    text-align: center;
-}
-#product_container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-#product_section{
-    width: 100%;
-    text-align: center;
-    padding: auto;
-}
-.item{
-    width: 340px;
-    height: 390px;
-    display: inline-block;
-    margin: 50px 50px 50px 50px;
-}
-.figure_item{
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-}
-.img_item{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    object-fit: cover;
-}
-.info_item{
-    display: block;
-}
-.item span:first-of-type{
-    font-size: 2.2rem;
-}
-.item span:last-of-type{
-    font-size: 1.8rem;
-}
+
 /*main*/
 /*footer*/
 footer>p:first-child{
