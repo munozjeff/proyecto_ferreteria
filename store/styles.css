@@ -8,7 +8,6 @@ html{
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
-
 body{
     margin: 0;
     padding: 0;
@@ -80,61 +79,35 @@ header a{
     margin: 5px 5px 5px 0;
 }
 /*header*/
-/*main*/
-h2{
-    font-size: 4rem;
-    text-align: center;
-}
-#product_container{
-    width: 100%;
+.product-section{
     display: flex;
     justify-content: center;
+    height: auto;
 }
-#product_section{
+.products-container{
+    display: flex;
+    width: 110rem;
+    justify-content: space-between;
+    column-gap: 5%;
+    height: auto;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+
+}
+
+.product-container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    margin-bottom: 4rem;
+
+}
+.product-container img{
+
+    height: 19rem;
     width: 100%;
-    text-align: center;
-    padding: auto;
-}
-.item{
-    width: 340px;
-    height: 390px;
-    display: inline-block;
-    margin: 50px 50px 50px 50px;
-}
-.figure_item{
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-}
-.img_item{
-    width: 100%;
-    height: 100%;
-    margin: 0;
     object-fit: cover;
+
 }
-.info_item{
-    display: block;
-}
-.item span:first-of-type{
-    font-size: 2.2rem;
-}
-.item span:last-of-type{
-    font-size: 1.8rem;
-}
-/*main*/
-/*footer*/
-footer>p:first-child{
-    font-size: 2.2rem;
-    margin: 50px 0 50px 0;
-    text-align: center;
-}
-footer>p{
-    font-size: 1.4rem;
-    text-align: center;
-}
-footer>p:last-child{
-    margin: 50px 0 50px 0;
-}
-/*footer*/
