@@ -1,6 +1,7 @@
 
 function initMap() {
-var myLatLng = {lat: 2.4574702, lng: -76.6349537};
+var myLatLng = {lat: 3.448947303361889, lng: -76.5336763364615};
+
 
 var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
@@ -10,6 +11,6 @@ var map = new google.maps.Map(document.getElementById('map'), {
 var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Hello World!'
+    title: 'Ferroelectricos y soluciones muñoz'
 });
 }

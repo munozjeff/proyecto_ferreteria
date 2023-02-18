@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../js/product_list.js" defer></script>
+    <script src="../../js/get_provider_category.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1 id="title_header">FERROELECTRICOS Y SOLUCIONES MUÑOZ</h1>
+        </div>
+    </header>
+    <main>
+        <nav id="nav_bar">
+            <a href="../product_register/product_register.html"><input type="button" value="REGISTRAR"></input></a>
+            <a href="../product_list/product_list.html"><input type="button" value="PRODUCTOS"></input></a>
+            <div id="search">
+                <input id="search_input" type="text" placeholder="search">
+            </div>
+            <div>
+                <div id="div_provider">
+                    <input list="provider" id="provider_input"  name="provider" placeholder="Proveedor">
+                    <datalist id="provider">
+                        
+                    </datalist>
+                </div>
+                <div id="div_category">
+                    <input list="category" id="category_input" name="category" placeholder="Categoria">
+                    <datalist id="category">
+                        
+                    </datalist>
+                </div>
+            </div>
+            
+        </nav>
+        <div class="products_container">
+             <!--<div class="item_container">
+                <figure class="figure">
+                    <img class="img" src="../../img/alicate.png" alt="">
+                </figure>
+                <div class="item_info">
+                    <div class="prop">
+                        <span>code: </span>
+                        <span>000000</span>
+                    </div>
+                    <div class="prop">
+                        <span>name: </span>
+                        <span>nombre</span>
+                    </div>
+                    <div class="prop">
+                        <span>category: </span>
+                        <span>categoria</span>
+                    </div>
+                    <div class="prop">
+                        <span>provider: </span>
+                        <span>proveedor</span>
+                    </div>
+                    <div class="prop">
+                        <span>cant: </span>
+                        <span>cantidad</span>
+                    </div>
+                    <div class="prop">
+                        <span>precio: </span>
+                        <span>precio</span>
+                    </div>
+                </div>
+                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+            </div>
+            <div class="item_container">
+                <figure class="figure">
+                    <img class="img" src="../../img/alicate.png" alt="">
+                </figure>
+                <div class="item_info">
+                    <div class="prop">
+                        <span>code: </span>
+                        <span>000000</span>
+                    </div>
+                    <div class="prop">
+                        <span>name: </span>
+                        <span>nombre</span>
+                    </div>
+                    <div class="prop">
+                        <span>category: </span>
+                        <span>categoria</span>
+                    </div>
+                    <div class="prop">
+                        <span>provider: </span>
+                        <span>proveedor</span>
+                    </div>
+                    <div class="prop">
+                        <span>cant: </span>
+                        <span>cantidad</span>
+                    </div>
+                    <div class="prop">
+                        <span>precio: </span>
+                        <span>precio</span>
+                    </div>
+                </div>
+                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+            </div>
+            <div class="item_container">
+                <figure class="figure">
+                    <img class="img" src="../../img/alicate.png" alt="">
+                </figure>
+                <div class="item_info">
+                    <div class="prop">
+                        <span>code: </span>
+                        <span>000000</span>
+                    </div>
+                    <div class="prop">
+                        <span>name: </span>
+                        <span>nombre</span>
+                    </div>
+                    <div class="prop">
+                        <span>category: </span>
+                        <span>categoria</span>
+                    </div>
+                    <div class="prop">
+                        <span>provider: </span>
+                        <span>proveedor</span>
+                    </div>
+                    <div class="prop">
+                        <span>cant: </span>
+                        <span>cantidad</span>
+                    </div>
+                    <div class="prop">
+                        <span>precio: </span>
+                        <span>precio</span>
+                    </div>
+                </div>
+                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+            </div>
+            <div class="item_container">
+                <figure class="figure">
+                    <img class="img" src="../../img/alicate.png" alt="">
+                </figure>
+                <div class="item_info">
+                    <div class="prop">
+                        <span>code: </span>
+                        <span>000000</span>
+                    </div>
+                    <div class="prop">
+                        <span>name: </span>
+                        <span>nombre</span>
+                    </div>
+                    <div class="prop">
+                        <span>category: </span>
+                        <span>categoria</span>
+                    </div>
+                    <div class="prop">
+                        <span>provider: </span>
+                        <span>proveedor</span>
+                    </div>
+                    <div class="prop">
+                        <span>cant: </span>
+                        <span>cantidad</span>
+                    </div>
+                    <div class="prop">
+                        <span>precio: </span>
+                        <span>precio</span>
+                    </div>
+                </div>
+                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <p>Ferroelectricos y soluciones muñoz</p>
+        <p>ferroelectricosmunoz@gmail.com</p>
+        <p>3117206568 - 3137205878</p>
+        <p>©2023 por Ferroelectricos y soluciones muñoz</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../js/product_register.js" defer></script>
+    <script src="../../js/get_provider_category.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1 id="title_header">FERROELECTRICOS Y SOLUCIONES MUÑOZ</h1>
+        </div>
+    </header>
+    <main>
+        <nav id="nav_bar">
+            <a href="../product_register/product_register.html"><input type="button" value="REGISTRAR"></input></a>
+            <a href="../product_list/product_list.html"><input type="button" value="PRODUCTOS"></input></a>
+        </nav>
+        <form id="register_form" enctype="multipart/form-data">
+            <div id="div_publish">
+                <div>
+                    <label for="publish">publicar</label>
+                    <select name="publish" id="select_publicar">
+                        <option value="1">Publicar</option>
+                        <option value="2">No publicar</option>
+                    </select>
+                </div>
+            </div>
+            <article id="info_product">
+                <div id="div_code">
+                    <label for="code">Codigo del producto</label>
+                    <input type="text" name="code" id="code" required>
+                </div>
+                <div id="div_name">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div id="div_textarea">
+                    <label for="description"> Descripcion del producto</label>
+                    <textarea name="description" name="description" id="description" cols="30" rows="10" required></textarea>
+                </div>
+                <div id="div_image">
+                    <label for="image">Selecciona una imagen:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <section id="container1">
+                    <div id="container">
+                        <div id="div_category">
+                            <label for="category">Categoria:</label>
+                            <input list="category" id="input_category" name="category_input" placeholder="Categoria">
+                            <datalist id="category">
+                                
+                            </datalist>
+                        </div>
+                        <div id="div_provider">
+                            <label for="provider">Provider:</label>
+                            <input list="provider" id="input_provider" name="provider_input" placeholder="Provedor">
+                            <datalist id="provider">
+                            </datalist>
+                        </div>
+                        <div id="div_existence">
+                            <label for="existence">Cantidad en stock</label>
+                            <input type="number" name="existence" placeholder="0" required>
+                        </div>
+                        <div id="div_price">
+                            <label for="price">Precio por unidad</label>
+                            <input type="number" name="price" placeholder="0.0">
+                        </div>
+                    </div>
+                    <div id="register">
+                        <input type="submit" value="REGISTRAR">
+                    </div>
+                </section>
+            </article>
+        </form>
+    </main>
+    <footer>
+        <p>Ferroelectricos y soluciones muñoz</p>
+        <p>ferroelectricosmunoz@gmail.com</p>
+        <p>3117206568 - 3137205878</p>
+        <p>©2023 por Ferroelectricos y soluciones muñoz</p>
+    </footer>
+</body>
+</html>
