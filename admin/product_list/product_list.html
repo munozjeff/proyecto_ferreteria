@@ -25,149 +25,107 @@
             </div>
             <div>
                 <div id="div_provider">
+                    <figure id="provider_icon">
+                        <img src="../../img/filter.png" alt="">
+                    </figure>
                     <input list="provider" id="provider_input"  name="provider" placeholder="Proveedor">
                     <datalist id="provider">
                         
                     </datalist>
+                    <figure id="provider_icon_delete">
+                        <img src="../../img/borrar.png" alt="">
+                    </figure>
                 </div>
                 <div id="div_category">
+                    <figure id="category_icon">
+                        <img src="../../img/filter.png" alt="">
+                    </figure>
                     <input list="category" id="category_input" name="category" placeholder="Categoria">
                     <datalist id="category">
                         
                     </datalist>
+                    <figure id="category_icon_delete">
+                        <img src="../../img/borrar.png" alt="">
+                    </figure>
                 </div>
             </div>
             
         </nav>
         <div class="products_container">
-             <!--<div class="item_container">
-                <figure class="figure">
-                    <img class="img" src="../../img/alicate.png" alt="">
-                </figure>
-                <div class="item_info">
-                    <div class="prop">
-                        <span>code: </span>
-                        <span>000000</span>
-                    </div>
-                    <div class="prop">
-                        <span>name: </span>
-                        <span>nombre</span>
-                    </div>
-                    <div class="prop">
-                        <span>category: </span>
-                        <span>categoria</span>
-                    </div>
-                    <div class="prop">
-                        <span>provider: </span>
-                        <span>proveedor</span>
-                    </div>
-                    <div class="prop">
-                        <span>cant: </span>
-                        <span>cantidad</span>
-                    </div>
-                    <div class="prop">
-                        <span>precio: </span>
-                        <span>precio</span>
-                    </div>
-                </div>
-                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+        </div>
+        <form id="register_form" enctype="multipart/form-data">
+            <div id="close">
+                <input type="button">
             </div>
-            <div class="item_container">
-                <figure class="figure">
-                    <img class="img" src="../../img/alicate.png" alt="">
-                </figure>
-                <div class="item_info">
-                    <div class="prop">
-                        <span>code: </span>
-                        <span>000000</span>
-                    </div>
-                    <div class="prop">
-                        <span>name: </span>
-                        <span>nombre</span>
-                    </div>
-                    <div class="prop">
-                        <span>category: </span>
-                        <span>categoria</span>
-                    </div>
-                    <div class="prop">
-                        <span>provider: </span>
-                        <span>proveedor</span>
-                    </div>
-                    <div class="prop">
-                        <span>cant: </span>
-                        <span>cantidad</span>
-                    </div>
-                    <div class="prop">
-                        <span>precio: </span>
-                        <span>precio</span>
-                    </div>
+            <div id="div_publish">
+                <div>
+                    <label for="publish">publicar</label>
+                    <select name="publish" id="select_publicar">
+                        <option value="1">Publicar</option>
+                        <option value="2">No publicar</option>
+                    </select>
                 </div>
-                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
             </div>
-            <div class="item_container">
-                <figure class="figure">
-                    <img class="img" src="../../img/alicate.png" alt="">
-                </figure>
-                <div class="item_info">
-                    <div class="prop">
-                        <span>code: </span>
-                        <span>000000</span>
-                    </div>
-                    <div class="prop">
-                        <span>name: </span>
-                        <span>nombre</span>
-                    </div>
-                    <div class="prop">
-                        <span>category: </span>
-                        <span>categoria</span>
-                    </div>
-                    <div class="prop">
-                        <span>provider: </span>
-                        <span>proveedor</span>
-                    </div>
-                    <div class="prop">
-                        <span>cant: </span>
-                        <span>cantidad</span>
-                    </div>
-                    <div class="prop">
-                        <span>precio: </span>
-                        <span>precio</span>
-                    </div>
+            <article id="info_product">
+                <div id="div_code">
+                    <label for="code">Codigo del producto</label>
+                    <input type="text" name="code" id="code" readonly required>
                 </div>
-                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
+                <div id="div_name">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div id="div_textarea">
+                    <label for="description"> Descripcion del producto</label>
+                    <textarea name="description" name="description" id="description" cols="30" rows="10" required></textarea>
+                </div>
+                <div id="div_image">
+                    <label for="image">Selecciona una imagen:</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <section id="container1">
+                    <div id="container">
+                        <div id="div_category_form">
+                            <label for="category">Categoria:</label>
+                            <input list="category" id="input_category" name="category_input" placeholder="Categoria">
+                            <datalist id="category">
+                                
+                            </datalist>
+                        </div>
+                        <div id="div_provider_form">
+                            <label for="provider">Provider:</label>
+                            <input list="provider" id="input_provider" name="provider_input" placeholder="Provedor">
+                            <datalist id="provider">
+                            </datalist>
+                        </div>
+                        <div id="div_existence">
+                            <label for="existence">Cantidad en stock</label>
+                            <input type="number" name="existence" id="input_cant" placeholder="0" required>
+                        </div>
+                        <div id="div_price">
+                            <label for="price">Precio por unidad</label>
+                            <input type="number" name="price" id="input_price" placeholder="0" required>
+                        </div>
+                    </div>
+                    <div id="buttons">
+                        <div id="update">
+                            <input type="submit" id="update_input" value="ACTUALIZAR">
+                        </div>
+                        <div id="delete">
+                            <input type="submit" id="delete_input" value="ELIMINAR">
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </form>
+        <div id="message_alert_container">
+            <div id="message_alert">
+                <p id="info_alert">desea eliminar </p>
+                <div id="message_button">
+                    <input type="button" id="alert_yes" value="SI">
+                    <input type="button" id="alert_no" value="NO">
+                </div>
             </div>
-            <div class="item_container">
-                <figure class="figure">
-                    <img class="img" src="../../img/alicate.png" alt="">
-                </figure>
-                <div class="item_info">
-                    <div class="prop">
-                        <span>code: </span>
-                        <span>000000</span>
-                    </div>
-                    <div class="prop">
-                        <span>name: </span>
-                        <span>nombre</span>
-                    </div>
-                    <div class="prop">
-                        <span>category: </span>
-                        <span>categoria</span>
-                    </div>
-                    <div class="prop">
-                        <span>provider: </span>
-                        <span>proveedor</span>
-                    </div>
-                    <div class="prop">
-                        <span>cant: </span>
-                        <span>cantidad</span>
-                    </div>
-                    <div class="prop">
-                        <span>precio: </span>
-                        <span>precio</span>
-                    </div>
-                </div>
-                <p class="item_description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ullam nisi reprehenderit omnis perferendis dolore facilis soluta eius, iusto adipisci asperiores molestias voluptatem magnam, possimus eligendi praesentium saepe vero aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maiores maxime aliquam officiis nam hic doloribus eveniet, obcaecati, ad, quam aut quibusdam modi repudiandae error a harum. Aliquid, incidunt doloremque!</p>
-            </div> -->
         </div>
     </main>
     <footer>

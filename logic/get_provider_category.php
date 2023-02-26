@@ -24,6 +24,7 @@
     catch(Exception $exception){
         $code = 0;
     }
+    mysqli_close($mysqli);
     $data = array("code" => $code, "category" => $category, "provider" => $provider);
     echo(json_encode($data));
 ?>

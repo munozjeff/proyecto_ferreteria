@@ -26,19 +26,24 @@
                              name, description, 
                              image, category, 
                              provider, cant, price, 
-                             publish) VALUES ('$product_data->code', 
+                             publish,views) VALUES ('$product_data->code', 
                              '$product_data->name', '$product_data->description',
                              '$filename', '$product_data->category', 
                              '$product_data->provider', '$product_data->existence',
                              '$product_data->price', 
-                             '$product_data->publish')";
+                             '$product_data->publish',
+                             0)";
     
                 $result = $mysqli->query($sql);
                 $code=$result;
                 if($result){
                     $save_data = new save_data();
-                    $save_data->save_provider($product_data->provider, $mysqli);
-                    $save_data->save_category($product_data->category, $mysqli);
+                    if($product_data->provider != ""){
+                        $save_data->save_provider($product_data->provider, $mysqli);
+                    }
+                    if($product_data->category != ""){
+                        $save_data->save_category($product_data->category, $mysqli);
+                    }
                     $message="Registro exitoso";
                 }
                 else{

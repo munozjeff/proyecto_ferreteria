@@ -1,4 +1,6 @@
 const container = document.getElementById("product_section")
+const menu = document.querySelector('#menu_burger')
+const desplegable = document.querySelector('#nav_var_header')
 
 for(let i=0;i<=10;i++){
     add_item()
@@ -27,3 +29,5 @@ function add_item(){
     item.appendChild(info_2)
     container.appendChild(item)
 }
+
+menu.addEventListener('click',()=>{desplegable.style.display = "block"})

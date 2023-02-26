@@ -1,46 +1,67 @@
 const container = document.getElementById('container')
 const previous = document.getElementById('previous')
 const next = document.getElementById('next')
+const menu = document.querySelector('#menu_burger')
+const desplegable = document.querySelector('#nav_var_header')
 var item_list = [];
+var products_list=[];
 let isDragging = false;
 let currentX;
 let initialX;
 let xOffset = 0;
 
-const create=createElements()
-function createElements(){
-    for(let i=0;i<10;i++){
+function renderProducts(product){
         const card = document.createElement('div'),
+                card2 = document.createElement('div'),
+                input = document.createElement('input')
+                input.type = 'hidden'
                 figure = document.createElement('figure'),
                 img = document.createElement('img'),
                 fast_view = document.createElement('submit'),
                 item_name = document.createElement('span'),
                 item_price = document.createElement('span');
 
-                img.src = ('../img/alicate.png')
+                img.src = ('user_image/'+product.image)
                 img.classList.add('img')
                 fast_view.textContent = ('Vista rapida')
                 fast_view.classList.add('input')
-                item_name.textContent = ('name' +i)
+                item_name.textContent = (product.name)
+                input.value = product.code
                 item_name.classList.add('span')
-                item_price.textContent = ('$9999')
+                item_price.textContent = ('$'+product.price)
                 item_price.classList.add('span')
                 figure.appendChild(img)
                 figure.classList.add('card_figure')
+                card2.appendChild(input)
+                card2.classList.add('card2')
+                card2.addEventListener('dblclick',view_product)
+                card.appendChild(card2)
                 card.appendChild(figure)
                 card.appendChild(fast_view)
                 card.appendChild(item_name)
                 card.appendChild(item_price)
                 card.classList.add('card')
                 card.value=2;
-                card.addEventListener("dblclick",dbClickEvent)
                 item_list.push(card)
                 container.appendChild(card)
-    }
 }
-function dbClickEvent(){
-    console.log(this.value)
+function view_product(event){
+    console.log("click")
+    products_list.forEach(product=>{
+        product.code == event.target.firstChild.value
+        if(product.code == event.target.firstChild.value){
+            data_send = JSON.stringify({"name":product.name,
+                                        "price":product.price,
+                                        "description":product.description,
+                                        "image":product.image,
+                                        "code":product.code})
+            window.open('products/view_product.html?product='+encodeURIComponent(data_send))
+            return
+        }
+    })
+    
 }
+
 container.addEventListener("mousedown", dragStart);
 container.addEventListener("mouseup", dragEnd);
 container.addEventListener("mouseleave", dragEnd);
@@ -123,10 +144,10 @@ function loadLeft(){
     item_list_reverse = item_list.slice().reverse()
     item_list_reverse.forEach(item=>{
         let newItem= item.cloneNode(true);
-        newItem.addEventListener("dblclick",dbClickEvent)
+        newItem.addEventListener('dblclick',view_product)
         container.insertBefore(newItem, container.firstElementChild);
     })
-    //container.scrollBy(container.scrollWidth-width, 0);
+    container.scrollBy(container.scrollWidth-width, 0);
     
     if(container.childElementCount>=30){
         for(let i=29;i>=20;i--){
@@ -136,10 +157,9 @@ function loadLeft(){
     container.scrollLeft = container.scrollWidth/2
 }
 function loadRight(){
-    let position=container.scrollLeft
     item_list.forEach(item=>{
         let newItem= item.cloneNode(true);
-        newItem.addEventListener("dblclick",dbClickEvent)
+        newItem.addEventListener('dblclick',view_product)
         container.appendChild(newItem)
     })   
     if(container.childElementCount>=30){
@@ -168,6 +188,7 @@ function click_previous(){
             requestAnimationFrame(transition);
         }
         else{
+            container.scrollLeft = position
             previous.addEventListener('click',click_previous)
             container.addEventListener("mousedown", dragStart);
         }
@@ -198,11 +219,28 @@ function click_next(){
             requestAnimationFrame(transition);
         }
         else{
+            container.scrollLeft=position
             next.addEventListener('click',click_next)
             container.addEventListener("mousedown", dragStart);
         }
     }
     //container.scrollLeft = container.scrollLeft+216
 }
+function get_products(){
+    fetch('logic/show_views.php', {
+        method: 'POST',
+    })
+    .then(function(data){
+        return data.json();
+    })
+    .then(myJson => { 
+        products_list = Array.from(myJson)
+        products_list.forEach(product=>{
+            renderProducts(product);
+        })
+    });
+}
 previous.addEventListener('click',click_previous)
 next.addEventListener('click',click_next)
+menu.addEventListener('click',()=>{desplegable.style.display = "block"})
+window.onload = get_products()

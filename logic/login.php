@@ -42,7 +42,7 @@ else{
     $message="no existe el usuario o esta inactivo";
     
 }  
-
+    mysqli_close($mysqli);
     $response = array("code"=>$code,"message"=>$message);
     echo(json_encode($response));
 ?>
